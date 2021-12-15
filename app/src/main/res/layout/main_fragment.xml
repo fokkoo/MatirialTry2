@@ -23,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerInside"
+        tools:srcCompat="@drawable/ic_launcher_foreground"
         tools:layout_editor_absoluteX="214dp"
         tools:layout_editor_absoluteY="130dp"
         tools:src="@tools:sample/avatars" />
