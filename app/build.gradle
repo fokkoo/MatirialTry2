@@ -6,7 +6,15 @@ plugins {
 android {
     compileSdk 31
 
+    // ссылка на незагружаемый файл с кодом паролем на сайт
+
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file("apikey.properties").newDataInputStream())
+    def nasaApiKey = properties.getProperty("NASA_API_KEY", "")
+
+
     defaultConfig {
+        buildConfigField("String", "NASA_API_KEY", nasaApiKey)
         applicationId "com.example.matirialtry2"
         minSdk 28
         targetSdk 31
@@ -21,6 +29,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    buildTypes.each {
+
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
