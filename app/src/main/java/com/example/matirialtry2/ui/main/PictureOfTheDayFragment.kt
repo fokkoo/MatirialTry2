@@ -5,10 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import coil.api.load
+import com.example.matirialtry2.MainActivity
 import com.example.matirialtry2.R
+import com.google.android.material.bottomappbar.BottomAppBar
+
+
+import android.view.*
+
+
 
 class PictureOfTheDayFragment : Fragment() {
     private val viewModel by viewModels<PictureOfTheDayViewModel>()
@@ -57,7 +65,31 @@ class PictureOfTheDayFragment : Fragment() {
             }
         }
     }
+/*
+    private fun setBottomAppBar(view: View) {
+        val context = activity as MainActivity
+        context.setSupportActionBar(view.findViewById(R.id.bottom_app_bar))
+        setHasOptionsMenu(true)
 
+        fab.setOnClickListener {
+            if (isMain) {
+                isMain = false
+
+                bottom_app_bar.navigationIcon = null
+                bottom_app_bar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
+                fab.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_back_fab))
+                bottom_app_bar.replaceMenu(R.menu.menu_bottom_bar_other_screen)
+            } else {
+                isMain = true
+                bottom_app_bar.navigationIcon =
+                    ContextCompat.getDrawable(context, R.drawable.ic_hamburger_menu_bottom_bar)
+                bottom_app_bar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
+                fab.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_plus_fab))
+                bottom_app_bar.replaceMenu(R.menu.menu_bottom_bar)
+            }
+        }
+    }
+*/
     companion object {
         fun newInstance() = PictureOfTheDayFragment()
         private var isMain = true

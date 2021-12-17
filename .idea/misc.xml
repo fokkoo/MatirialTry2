@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_hamburger_menu_bottom_bar.xml" value="0.14375" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_humburger_menu_bottom_bar.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_no_photo_vector.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_plus_fab.xml" value="0.20729166666666668" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_wikipedia.xml" value="0.20729166666666668" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.17753623188405798" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/layout/main_activity.xml" value="0.264" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/layout/main_fragment.xml" value="0.264" />
       </map>
