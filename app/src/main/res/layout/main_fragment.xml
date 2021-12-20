@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <ImageView
                 android:id="@+id/image_view_picture_of_day"
                 android:layout_width="match_parent"

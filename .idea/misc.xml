@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16041666666666668" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_baseline_wine_bar_24.xml" value="0.16041666666666668" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_hamburger_menu_bottom_bar.xml" value="0.14375" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_humburger_menu_bottom_bar.xml" value="0.13055555555555556" />
+        <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.16041666666666668" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_no_photo_vector.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_plus_fab.xml" value="0.20729166666666668" />
         <entry key="..\:/Users/fokko/AndroidStudioProjects/MatirialTry2/app/src/main/res/drawable/ic_wikipedia.xml" value="0.20729166666666668" />

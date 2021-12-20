@@ -8,7 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PictureOfTheDayViewModel (
+class PictureOfTheDayViewModel(
     private val liveDataForViewToObserve: MutableLiveData<PictureOfTheDayData> = MutableLiveData(),
     private val retrofitImpl: PODRetrofitImpl = PODRetrofitImpl()
 ) :
@@ -45,7 +45,7 @@ class PictureOfTheDayViewModel (
                     }
                 }
 
-                override fun onFailure(call: Call<PODServerResponseData>, t:Throwable) {
+                override fun onFailure(call: Call<PODServerResponseData>, t: Throwable) {
                     liveDataForViewToObserve.value = PictureOfTheDayData.Error(t)
                 }
             })
