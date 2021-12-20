@@ -27,7 +27,7 @@
                 app:endIconDrawable="@drawable/ic_wikipedia"
                 app:endIconMode="custom"
                 app:helperText="wiki_helper_text"
-                app:layout_constraintBottom_toTopOf="@+id/image_view"
+                app:layout_constraintBottom_toTopOf="@+id/image_view_picture_of_day"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -38,9 +38,9 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
             <ImageView
-                android:id="@+id/image_view"
+                android:id="@+id/image_view_picture_of_day"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
                 android:contentDescription="photo_of_the_day_stub"
                 app:layout_constraintBottom_toBottomOf="parent"

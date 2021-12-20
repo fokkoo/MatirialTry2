@@ -39,7 +39,7 @@ class PictureOfTheDayFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dailyImageView = view.findViewById(R.id.imageView)
+        dailyImageView = view.findViewById(R.id.image_view_picture_of_day)
     }
 
     private fun renderData(dailyImage: PictureOfTheDayData) {
