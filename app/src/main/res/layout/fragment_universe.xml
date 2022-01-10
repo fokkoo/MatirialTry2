@@ -20,6 +20,7 @@
         app:tabInlineLabel="true"
         app:tabSelectedTextColor="@color/teal_200"
         app:tabTextColor="@color/blue"
+        app:tabMode="scrollable"
          />
 
 

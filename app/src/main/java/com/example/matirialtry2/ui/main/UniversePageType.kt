@@ -4,6 +4,6 @@ enum class UniversePageType {
     Sun,
     Mercury,
   Venera,
-  /*  Earth,
-    Mars,*/
+  Earth,
+    Mars,
 }
