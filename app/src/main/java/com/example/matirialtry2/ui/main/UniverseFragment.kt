@@ -62,6 +62,8 @@ class UniverseFragment : Fragment() {
             }
         }
         )
+
+        // создание верхних кнопок табов
         tabLayout = view.findViewById(R.id.tab_layout_universe)
         TabLayoutMediator(tabLayout,viewPager){tab,position-> val type = adapter.items[position]
             tab.text = type.name

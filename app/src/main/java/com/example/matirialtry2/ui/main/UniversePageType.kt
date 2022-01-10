@@ -3,7 +3,7 @@ package com.example.matirialtry2.ui.main
 enum class UniversePageType {
     Sun,
     Mercury,
-    Venera,
+  Venera,
     Earth,
     Mars,
 }
