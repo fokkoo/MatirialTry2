@@ -38,7 +38,7 @@ class UniverseFragment : Fragment() {
     adapter.items = UniversePageType.values().toList()
         viewPager.adapter = adapter
         
-       // viewPager.setPageTransformer(ZoomOutPageTransformer())
+        viewPager.setPageTransformer(ZoomOutPageTransformer())
 
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageScrolled(
@@ -66,6 +66,14 @@ class UniverseFragment : Fragment() {
         // создание верхних кнопок табов
         tabLayout = view.findViewById(R.id.tab_layout_universe)
         TabLayoutMediator(tabLayout,viewPager){tab,position-> val type = adapter.items[position]
+
+/*
+           when (position){
+               1->R.drawable.ic_wikipedia
+               2->R.drawable.ic_plus_fab
+               3->R.drawable.ic_baseline_wine_bar_24
+           }*/
+
             tab.text = type.name
 
             tab.icon = ContextCompat.getDrawable(requireContext(),R.drawable.ic_wikipedia)
