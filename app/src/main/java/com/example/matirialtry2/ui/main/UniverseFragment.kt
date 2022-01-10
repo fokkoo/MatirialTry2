@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.matirialtry2.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -18,7 +20,20 @@ class UniverseFragment : Fragment() {
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
 
+    private lateinit var bottomNavigationView: BottomNavigationView
 
+    private val navigationItemSelectedListener = NavigationBarView.OnItemSelectedListener { item ->
+        //this logic will be move into view model
+        val fragment = when (item.itemId) {
+            R.id.bottom_view_sun -> UniversePageFragment.newInstance(UniversePageType.Sun)
+            R.id.bottom_view_mercury -> UniversePageFragment.newInstance(UniversePageType.Mercury)
+            R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
+            else -> throw IllegalArgumentException("Select unknown item")
+        }
+
+        openScreen(fragment)
+        true
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,12 +50,12 @@ class UniverseFragment : Fragment() {
         viewPager = view.findViewById(R.id.view_pager_universe)
         val adapter = UniverseStatePagerAdapter(this)
 
-    adapter.items = UniversePageType.values().toList()
+        adapter.items = UniversePageType.values().toList()
         viewPager.adapter = adapter
-        
+
         viewPager.setPageTransformer(ZoomOutPageTransformer())
 
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
@@ -48,24 +63,28 @@ class UniverseFragment : Fragment() {
             ) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels)
 
-                Log.d("View pager", " onPageScrolled possition $position, positionOffset $positionOffset ")
+                Log.d(
+                    "View pager",
+                    " onPageScrolled possition $position, positionOffset $positionOffset "
+                )
             }
 
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
-                Log.d("View pager","onPageSelected, position $position")
+                Log.d("View pager", "onPageSelected, position $position")
             }
 
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
-                Log.d("View pager","onPageScrollStateChanged, state $state")
+                Log.d("View pager", "onPageScrollStateChanged, state $state")
             }
         }
         )
 
         // создание верхних кнопок табов
         tabLayout = view.findViewById(R.id.tab_layout_universe)
-        TabLayoutMediator(tabLayout,viewPager){tab,position-> val type = adapter.items[position]
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            val type = adapter.items[position]
 
 /*
            when (position){
@@ -76,10 +95,17 @@ class UniverseFragment : Fragment() {
 
             tab.text = type.name
 
-            tab.icon = ContextCompat.getDrawable(requireContext(),R.drawable.ic_wikipedia)
+            tab.icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_wikipedia)
 
         }.attach()
 
+    }
+
+    private fun openScreen(fragment: Fragment) {
+        childFragmentManager.beginTransaction().apply {
+            replace(R.id.view_fragment_container, fragment, fragment::class.java.simpleName)
+            commit()
+        }
     }
 
     companion object {

@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-       // setTheme(DailyImageFragment.currentTheme)
+        // setTheme(DailyImageFragment.currentTheme)
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-           supportFragmentManager.commit {
+            supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add<UniverseFragment>(R.id.fragment_container)
             }
@@ -28,6 +28,6 @@ class MainActivity : AppCompatActivity() {
                .commitNow()
 
  */
-       }
-   }
+        }
+    }
 }

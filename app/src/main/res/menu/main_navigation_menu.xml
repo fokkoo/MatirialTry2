@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/bottom_view_earth"
+        android:id="@+id/bottom_view_sun"
         android:icon="@drawable/ic_hamburger_menu_bottom_bar"
-        android:title="button one" />
+        android:title="button one_sun" />
 
     <item
-        android:id="@+id/bottom_view_mars"
+        android:id="@+id/bottom_view_mercury"
         android:icon="@drawable/ic_launcher_background"
-        android:title="button two" />
+        android:title="button two_mercury" />
 
     <item
-        android:id="@+id/bottom_view_weather"
+        android:id="@+id/bottom_view_venera"
         android:icon="@drawable/ic_plus_fab"
-        android:title="button three" />
+        android:title="button three_venera" />
 </menu>
