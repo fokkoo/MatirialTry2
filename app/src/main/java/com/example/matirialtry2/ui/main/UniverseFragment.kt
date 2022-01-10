@@ -72,5 +72,8 @@ class UniverseFragment : Fragment() {
 
     }
 
-
+    companion object {
+        fun newInstance() = PictureOfTheDayFragment()
+        private var isMain = true
+    }
 }
