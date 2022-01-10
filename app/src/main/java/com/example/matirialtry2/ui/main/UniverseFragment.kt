@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.matirialtry2.R
@@ -20,6 +21,7 @@ class UniverseFragment : Fragment() {
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
 
+    private lateinit var fragmentContainerView: View
     private lateinit var bottomNavigationView: BottomNavigationView
 
     private val navigationItemSelectedListener = NavigationBarView.OnItemSelectedListener { item ->
@@ -35,6 +37,29 @@ class UniverseFragment : Fragment() {
         true
     }
 
+
+    private val navigationItemReselectedListener = NavigationBarView.OnItemReselectedListener { item ->
+        // you can scroll to top for one of fragment, for example
+    }
+
+    private val backPressedReturnMainCallback = object : OnBackPressedCallback(true) {
+
+        override fun handleOnBackPressed() {
+            // call backPressedReturnMainCallback.enabled = false after setting earth
+            // don't forget to set enabled = true if not earth
+            openScreen(UniversePageFragment.newInstance(UniversePageType.Earth))
+            bottomNavigationView.selectedItemId = R.id.bottom_view_sun
+        }
+    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(backPressedReturnMainCallback)
+
+        openScreen(UniversePageFragment.newInstance(UniversePageType.Earth))
+    }
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,6 +71,14 @@ class UniverseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        fragmentContainerView = view.findViewById(R.id.view_fragment_container)
+
+        bottomNavigationView = view.findViewById(R.id.navigation_view_main)
+        bottomNavigationView.setOnItemSelectedListener(navigationItemSelectedListener)
+        bottomNavigationView.setOnItemReselectedListener(navigationItemReselectedListener)
+
+
 
         viewPager = view.findViewById(R.id.view_pager_universe)
         val adapter = UniverseStatePagerAdapter(this)
