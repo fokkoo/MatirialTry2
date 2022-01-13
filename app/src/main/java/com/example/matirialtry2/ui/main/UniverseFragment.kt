@@ -29,7 +29,9 @@ class UniverseFragment : Fragment() {
         val fragment = when (item.itemId) {
             R.id.bottom_view_sun -> UniversePageFragment.newInstance(UniversePageType.Sun)
             R.id.bottom_view_mercury -> UniversePageFragment.newInstance(UniversePageType.Mercury)
+            // R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
             R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
+            //  R.id.bottom_view_venera -> PictureOfTheDayFragment.newInstance()
             else -> throw IllegalArgumentException("Select unknown item")
         }
 
@@ -38,9 +40,10 @@ class UniverseFragment : Fragment() {
     }
 
 
-    private val navigationItemReselectedListener = NavigationBarView.OnItemReselectedListener { item ->
-        // you can scroll to top for one of fragment, for example
-    }
+    private val navigationItemReselectedListener =
+        NavigationBarView.OnItemReselectedListener { item ->
+            // you can scroll to top for one of fragment, for example
+        }
 
     private val backPressedReturnMainCallback = object : OnBackPressedCallback(true) {
 
@@ -51,6 +54,7 @@ class UniverseFragment : Fragment() {
             bottomNavigationView.selectedItemId = R.id.bottom_view_sun
         }
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
