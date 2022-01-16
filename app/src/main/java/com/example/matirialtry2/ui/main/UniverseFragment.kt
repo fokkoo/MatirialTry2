@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.example.matirialtry2.PurchaseDetailFragment
 import com.example.matirialtry2.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
@@ -28,10 +29,13 @@ class UniverseFragment : Fragment() {
         //this logic will be move into view model
         val fragment = when (item.itemId) {
             R.id.bottom_view_sun -> UniversePageFragment.newInstance(UniversePageType.Sun)
-            R.id.bottom_view_mercury -> UniversePageFragment.newInstance(UniversePageType.Mercury)
+            //  R.id.bottom_view_mercury -> UniversePageFragment.newInstance(UniversePageType.Mercury)
             // R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
            // R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
-              R.id.bottom_view_venera -> PictureOfTheDayFragment.newInstance()
+          //   R.id.bottom_view_venera -> PictureOfTheDayFragment.newInstance()
+            R.id.bottom_view_venera -> PlanetCardFragment.newInstance()
+
+            R.id.bottom_view_mercury -> PurchaseDetailFragment.newInstance()
             else -> throw IllegalArgumentException("Select unknown item")
         }
 
