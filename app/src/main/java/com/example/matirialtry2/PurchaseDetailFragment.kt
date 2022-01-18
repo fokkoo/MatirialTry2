@@ -1,4 +1,5 @@
 package com.example.matirialtry2
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,14 +19,14 @@ class PurchaseDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_purchase_detail,container,false)
+        return inflater.inflate(R.layout.fragment_purchase_detail, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         expandedToolbarBackgroundImageView = view.findViewById(R.id.main_backdrop)
-        val url = "http://images.vfl.ru/ii/1602851736/c36aa1e1/31959638.jpg"
+        val url = "https://freepngimg.com/thumb/city/36275-3-city-hd.png"
         expandedToolbarBackgroundImageView.load(url)
     }
 

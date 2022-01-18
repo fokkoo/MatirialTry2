@@ -31,8 +31,8 @@ class UniverseFragment : Fragment() {
             R.id.bottom_view_sun -> UniversePageFragment.newInstance(UniversePageType.Sun)
             //  R.id.bottom_view_mercury -> UniversePageFragment.newInstance(UniversePageType.Mercury)
             // R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
-           // R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
-          //   R.id.bottom_view_venera -> PictureOfTheDayFragment.newInstance()
+            // R.id.bottom_view_venera -> UniversePageFragment.newInstance(UniversePageType.Venera)
+            //   R.id.bottom_view_venera -> PictureOfTheDayFragment.newInstance()
             R.id.bottom_view_venera -> PlanetCardFragment.newInstance()
 
             R.id.bottom_view_mercury -> PurchaseDetailFragment.newInstance()

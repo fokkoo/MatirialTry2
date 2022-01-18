@@ -86,8 +86,7 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/Chip2"
-        app:layout_constraintTop_toBottomOf="@+id/view3"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/Chip2"
@@ -98,8 +97,8 @@
 
         app:layout_constraintLeft_toRightOf="@+id/Chip1"
         app:layout_constraintRight_toLeftOf="@+id/Chip23"
-        app:layout_constraintTop_toBottomOf="@+id/Chip1"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Chip1" />
+
     <com.google.android.material.chip.Chip
         android:id="@+id/Chip23"
         style="@style/Widget.MaterialComponents.Chip.Filter"
@@ -109,8 +108,8 @@
 
         app:layout_constraintLeft_toRightOf="@+id/Chip2"
         app:layout_constraintRight_toLeftOf="@+id/Chip3"
-        app:layout_constraintTop_toBottomOf="@+id/Chip3"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Chip3" />
+
     <com.google.android.material.chip.Chip
         android:id="@+id/Chip3"
         style="@style/Widget.MaterialComponents.Chip.Action"
@@ -120,8 +119,7 @@
 
         app:layout_constraintLeft_toRightOf="@+id/Chip23"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Chip2"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Chip2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/Guideline_planet_card"
@@ -142,8 +140,6 @@
         app:layout_constraintEnd_toEndOf="@id/Guideline_planet_card"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
