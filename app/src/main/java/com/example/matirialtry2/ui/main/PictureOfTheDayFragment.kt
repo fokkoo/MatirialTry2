@@ -57,7 +57,7 @@ class PictureOfTheDayFragment : Fragment() {
                 }
             }
             is PictureOfTheDayData.Loading -> {
-                // show error
+                // show error here
             }
             is PictureOfTheDayData.Error -> {
                 // show error
