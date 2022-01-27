@@ -9,11 +9,8 @@ class UniverseStatePagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragm
     var items = listOf<UniversePageType>()
 
     override fun createFragment(position: Int): Fragment {
-
-
         val type = items[position]
         return UniversePageFragment.newInstance(type)
-
     }
 
     override fun getItemCount(): Int {

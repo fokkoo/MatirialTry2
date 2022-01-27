@@ -9,13 +9,12 @@ import androidx.viewpager2.widget.ViewPager2
 
 class ZoomOutPageTransformer : ViewPager2.PageTransformer {
 
+    val MIN_SCALE = 0.85f
+    val MIN_ALPHA = 0.5f
+
     override fun transformPage(view: View, position: Float) {
         val pageWidth = view.width
         val pageHeight = view.height
-
-
-
-        Log.d("VIEWPAGERTRANSOFRMER", "view: ${view.hashCode()}, position $position")
 
         when {
             position < -1 -> { // [-Infinity,-1)
@@ -48,9 +47,5 @@ class ZoomOutPageTransformer : ViewPager2.PageTransformer {
         }
     }
 
-    companion object {
 
-        private const val MIN_SCALE = 0.85f
-        private const val MIN_ALPHA = 0.5f
-    }
 }
