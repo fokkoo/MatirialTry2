@@ -44,14 +44,13 @@ class UniverseFragment : Fragment() {
 
     private val navigationItemReselectedListener =
         NavigationBarView.OnItemReselectedListener { item ->
-            // you can scroll to top for one of fragment, for example
+
         }
 
     private val backPressedReturnMainCallback = object : OnBackPressedCallback(true) {
 
         override fun handleOnBackPressed() {
-            // call backPressedReturnMainCallback.enabled = false after setting earth
-            // don't forget to set enabled = true if not earth
+
             openScreen(UniversePageFragment.newInstance(UniversePageType.Earth))
             bottomNavigationView.selectedItemId = R.id.bottom_view_sun
         }
@@ -71,7 +70,7 @@ class UniverseFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        
         return inflater.inflate(R.layout.fragment_universe, container, false)
     }
 

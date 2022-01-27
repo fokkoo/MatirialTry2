@@ -6,6 +6,7 @@ import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.example.matirialtry2.ui.main.MainFragment
 import com.example.matirialtry2.ui.main.PictureOfTheDayFragment
+import com.example.matirialtry2.ui.main.PlanetCardFragment
 import com.example.matirialtry2.ui.main.UniverseFragment
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+
+
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
@@ -24,5 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
+
     }
 }
