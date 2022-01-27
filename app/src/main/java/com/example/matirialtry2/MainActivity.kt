@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // setTheme(DailyImageFragment.currentTheme)
+
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
@@ -22,12 +22,7 @@ class MainActivity : AppCompatActivity() {
                 add<UniverseFragment>(R.id.fragment_container)
             }
 
-/*
-           supportFragmentManager.beginTransaction()
-               .replace(R.id.container, UniverseFragment.newInstance())
-               .commitNow()
 
- */
         }
     }
 }
