@@ -29,9 +29,7 @@ class UniverseFragment : Fragment() {
         //this logic will be move into view model
         val fragment = when (item.itemId) {
             R.id.bottom_view_sun -> UniversePageFragment.newInstance(UniversePageType.Sun)
-
             R.id.bottom_view_venera -> PlanetCardFragment.newInstance()
-
             R.id.bottom_view_mercury -> PurchaseDetailFragment.newInstance()
             else -> throw IllegalArgumentException("Select unknown item")
 
@@ -40,7 +38,6 @@ class UniverseFragment : Fragment() {
         openScreen(fragment)
         true
     }
-
 
     private val navigationItemReselectedListener =
         NavigationBarView.OnItemReselectedListener { item ->
